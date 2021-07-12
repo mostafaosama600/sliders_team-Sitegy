@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="css4/main.css">
+</head>
+<body>
+    <nav>
+        <ul style="text-align: center; margin-top: 60px; font-size: 22px;">
+            <li style="padding: 3px; display: inline-block;"><a href="slider.html" style="color: #222; text-decoration: none; cursor: pointer;">Mostafa</a></li>
+            <li style="padding: 3px; display: inline-block;"><a href="slidertwo.html" style="color: #222; text-decoration: none; cursor: pointer;">Alaa</a></li>
+            <li style="padding: 3px; display: inline-block;"><a href="sliderthree.html" style="color: #222; text-decoration: none; cursor: pointer;">Nancy</a></li>
+            <li style="padding: 3px; display: inline-block;"><a href="sliderfour.html" style="color: #222; text-decoration: none; cursor: pointer;">Radi</a></li>
+            <!-- <li style="padding: 3px; display: inline-block;"><a href="#" style="color: #222; text-decoration: none; cursor: pointer;">Mahmoud</a></li> -->
+        </ul>
+    </nav>
+    <h2>Review Customer</h2>
+    <div class="slider">
+        <div class="control">
+             <button id="next">+</button>
+             <button id="prev">-</button>
+        </div>
+        
+        <div class="slide">
+            
+            <div class="circle">
+            <img src="main img/Review_Slider_Img/pic1.jpg" alt="">
+            </div>
+            <h3>mohamed rady</h3>
+            <p>my name is mohamed rady iam 36years i studied php and mysql and objected oriented </p>
+        </div>
+        
+        <div class="slide">
+            <div class="circle">
+            <img src="main img/Review_Slider_Img/pic2.jpg" alt="">
+            </div>
+            <h3> mohamed rady</h3>
+            <p>front-end package (html,css, javascript,jquery,bootstrap)</p>
+
+        </div>
+        
+        <div class="slide">
+            <div class="circle">
+            <img src="main img/Review_Slider_Img/pic3.jpg" alt="">
+            </div>
+            <h3>UR GYM </h3>
+            <p>it's first task with you about gym from one week ago </p>
+        </div>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+<script>
+    let slider = Array.from(document.querySelectorAll('.slider .slide'));
+
+let count = slider.length;
+
+let current = 1;
+
+
+let nxtbtn = document.getElementById('next');
+let prevbtn = document.getElementById('prev');
+
+nxtbtn.onclick= next;
+prevbtn.onclick= prev;
+active();
+
+function next(){
+    if(nxtbtn.classList.contains('disable')){return false;}
+    else{
+       current++;
+       active();
+     
+       
+    }
+}
+function prev(){
+   if(prevbtn.classList.contains('disable')){return false;}
+   else{
+      current--;
+      active();
+   }
+}
+
+
+function active(){
+    ractive();
+    slider[current-1].classList.add('active');
+    if(current == 1){prevbtn.classList.add('disable');}else{prevbtn.classList.remove('disable');};
+    if(current == count){nxtbtn.classList.add('disable');}else{nxtbtn.classList.remove('disable');}
+
+}
+
+function ractive(){
+  slider.forEach(function (slide){slide.classList.remove('active');});
+}
+
+
+</script>
+</html>

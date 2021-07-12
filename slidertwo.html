@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with-device-width, initial-scale=">
+    <title> Design 1</title>
+    <link rel="stylesheet" href="css2/style.css">
+ </head>
+ <body>
+
+  <!-- Look at after and before in the css file -->
+ <!--Start Box-->
+ <nav>
+  <ul style="margin-top: 60px; text-align: center;">
+    <li style="padding: 3px; display: inline-block;"><a href="slider.html" style="color: #222; text-decoration: none; cursor: pointer;">Mostafa</a></li>
+      <li style="padding: 3px; display: inline-block;"><a href="slidertwo.html" style="color: #222; text-decoration: none; cursor: pointer;">Alaa</a></li>
+      <li style="padding: 3px; display: inline-block;"><a href="sliderthree.html" style="color: #222; text-decoration: none; cursor: pointer;">Nancy</a></li>
+      <li style="padding: 3px; display: inline-block;"><a href="sliderfour.html" style="color: #222; text-decoration: none; cursor: pointer;">Radi</a></li>
+      <!-- <li style="padding: 3px; display: inline-block;"><a href="#" style="color: #222; text-decoration: none; cursor: pointer;">Mahmoud</a></li> -->
+  </ul>
+</nav>
+<h2>Review Customer</h2>
+ <div class="box">
+   
+   
+
+    <div id="banner">
+
+       <div class="view">
+         
+          <div class="title">
+             <img src="main img/images/pic1.jpg">
+             <div>
+               <h3>Alaa Aziz</h3> <br>
+               <p>Web Designer</p>
+              </div>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus<br>
+             modi deserunt eum laudantium magnam, culpa error aliquid ut necessitatibus<br>
+             labore consequatur iste reprehenderit
+           </p>
+       </div>
+       <div class="view">
+         <div class="title">
+            <img src="main img/images/pic2.jpg">
+            <div>
+              <h3>Ahmed Aziz</h3> <br>
+              <p>Web Designer</p>
+             </div>
+           </div>
+           <p>Lorem, ipsum dolor sit. Ab ducimus<br>
+            modi deserunt eum laudantium magnam, culpa error aliquid ut necessitatibus<br>
+            labore consequatur iste reprehenderit fugit nemo veritatis enim provident tempora?
+          </p>
+      </div>
+      <div class="view">
+         <div class="title">
+            <img src="main img/images/pic3.jpg">
+            <div>
+              <h3>Alaa Aziz</h3> <br>
+              <p>Web Designer</p>
+             </div>
+           </div>
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus<br>
+            modi deserunt eum laudantium, necessitatibus<br>
+            labore consequatur iste reprehenderit fugit nemo veritatis enim provident tempora?
+          </p>
+      </div>
+      <div class="view">
+         <div class="title">
+            <img src="main img/images/pic4.jpg">
+            <div>
+              <h3>Mohammed Aziz</h3> <br>
+              <p>Web Designer</p>
+             </div>
+           </div>
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus<br>
+            modi deserunt eum laudantium magnam, culpa error aliquid ut necessitatibus<br>
+            labore, provident tempora?
+          </p>
+      </div>
+   </div>
+    <div class="right-side">
+          <img src="./main img/images/up-arrow.png" id="up">
+         <img src="./main img/images/down-arrow.png" id="down">
+      </div>
+   </div>
+</div>
+<!----------------box------------------->
+   <script src ="js/design1.js"></script>
+   <script>
+        var banner = document.getElementById("banner");
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+
+        let y = 0;
+        up.onclick = function(){
+            if(y > "-900"){
+            y = y - 300;
+            banner.style.top = y + "px";
+        }
+        }
+        down.onclick = function(){
+            if(y < "0"){
+            y = y + 300;
+            banner.style.top = y + "px";
+        }
+        }
+   </script>
+ </body>
+</html>

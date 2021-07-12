@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/20410b9b1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css3/style.css" />
+    <title>Slider</title>
+  </head>
+  <body>
+
+    <div class="page">
+      <nav>
+        <ul>
+          <li style="padding: 3px; display: inline-block;"><a href="slider.html" style="color: #222; text-decoration: none; cursor: pointer;">Mostafa</a></li>
+            <li style="padding: 3px; display: inline-block;"><a href="slidertwo.html" style="color: #222; text-decoration: none; cursor: pointer;">Alaa</a></li>
+            <li style="padding: 3px; display: inline-block;"><a href="sliderthree.html" style="color: #222; text-decoration: none; cursor: pointer;">Nancy</a></li>
+            <li style="padding: 3px; display: inline-block;"><a href="sliderfour.html" style="color: #222; text-decoration: none; cursor: pointer;">Radi</a></li>
+            <!-- <li style="padding: 3px; display: inline-block;"><a href="#" style="color: #222; text-decoration: none; cursor: pointer;">Mahmoud</a></li> -->
+        </ul>
+    </nav>
+      <h2>Review Customer</h2>
+      <div class="container">
+        <div id="slider">
+          <div class="card">
+            <div class="info">
+              <img src="main img/imgs three/pic1.jpg" alt="" />
+              <div>
+                <h3>Nancy Ahmed</h3>
+                <p>Full Stack Javascript Developer</p>
+              </div>
+            </div>
+
+            <p>
+              Seeking a position as a Full-Stack JavaScript Developer MEARN to
+              lead a challenging and exciting career in a reputable environment,
+              utilizing my skills and knowledge to be the best of 
+              my abilities and contribute positively to my personal
+              growth as well as the growth of the organization.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="info">
+              <img src="main img/imgs three/pic2.jpg" alt="" />
+              <div>
+                <h3>Osama Mohamed</h3>
+                <p>Front-end Developer</p>
+              </div>
+            </div>
+
+            <p>
+              Seeking a position as a Front-end Developer to
+              lead a challenging and exciting career in a reputable environment,
+              utilizing my skills and knowledge to be the best of my abilities
+              and contribute positively to my personal growth as well as the
+              growth of the organization.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="info">
+              <img src="main img/imgs three/pic3.jpg" alt="" />
+              <div>
+                <h3>Alaa Aziz</h3>
+                <p>Full Stack Javascript Developer</p>
+              </div>
+            </div>
+
+            <p>
+              Seeking a position as a Full-Stack JavaScript Developer MEARN to
+              lead a challenging and exciting career in a reputable environment,
+              utilizing my skills and knowledge to be the best of my abilities
+              and contribute positively to my personal growth as well as the
+              growth of the organization.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="info">
+              <img src="main img/imgs three/pic4.jpg" alt="" />
+              <div>
+                <h3>Yahia Mostafa</h3>
+                <p>UI/UX Designer </p>
+              </div>
+            </div>
+            <p>
+              Seeking a position as a UI/UX Designer to
+              lead a challenging and exciting career in a reputable environment,
+              utilizing my skills and knowledge to be the best of my abilities
+              and contribute positively to my personal growth as well as the
+              growth of the organization.
+            </p>
+          </div>
+        </div>
+
+        <div class="control-buttons">
+            <i class="fas fa-arrow-circle-up" style="color: beige;" id="upArrow"></i>
+            <i class="fas fa-arrow-circle-down" style="color: beige;" id="downArrow"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        var slider = document.getElementById("slider");
+        var upArrow = document.getElementById("upArrow");
+        var downArrow = document.getElementById("downArrow");
+        let x = 0;
+        upArrow.onclick = function () {
+            if(x > "-900"){
+                x = x - 300;
+                slider.style.top = x + "px";
+            }
+        }
+        downArrow.onclick = function () {
+            if(x < 0){
+                x = x + 300;
+                slider.style.top = x + "px";
+            }
+        }
+    </script>
+
+  </body>
+</html>

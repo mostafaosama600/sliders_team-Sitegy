@@ -1,0 +1,115 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{ font-family: sans-serif;  background-color:#f6fbff;}
+
+.box{
+    overflow: hidden;
+    box-shadow: -10px 10px 40px rgba(0,0,0,0.25);
+    height:300px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    border-radius: 12px;
+    margin: 90px auto
+    
+}
+h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 30px;
+}
+h2::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(to right, black,#777);
+    position: absolute;
+    bottom:-10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.view{
+    position:relative;
+    color:#000;
+    background-color:#fff;
+    height:300px;
+    padding:40px;
+    line-height:22px;
+    z-index: 1;
+}
+.title{
+    margin-bottom: 40px;
+    display: flex;
+    align-items:center;
+}
+.title img{
+    border-radius: 50%;
+    width: 70px;
+    margin-right:20px;
+}
+.title h3{
+    color: #444;
+    margin-bottom:10px;
+    font-size: 25px;
+}
+#banner{
+    width:100%;
+    padding-right:60px;
+    position: absolute;
+    left:0;
+    top:0;
+    transition: .5s all;
+}
+.right-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height:100%;
+  background-color:#444 ;
+  position: absolute;
+  right:0;
+  top:0;
+  padding:15px 0;
+  width: 60px;
+  box-sizing: border-box;
+}
+  
+.right-side img{
+    padding:5px;
+    width:25px;
+    background-color:#fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* HERE You was forget the Width */
+.view::before{
+    content: "";
+    height:110px;
+    width: 110px;
+    border-bottom-right-radius:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #444;
+    top: 0;
+    left:0;
+    z-index:-1;
+
+}
+::selection{
+background-color: #777;
+color:#fff
+}
+a:hover{
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    transition: 0.3s;
+}
